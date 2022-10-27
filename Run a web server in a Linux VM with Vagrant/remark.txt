@@ -1,0 +1,34 @@
+#Creating a new vagrant machine
+#This initialises a new Vagrant virtual machine, using Ubuntu version 22.04
+
+vagrant init ubuntu/jammy64
+
+#boot up the virtual machie
+
+vagrant up
+
+#Going inside the Vm
+
+vagrant ssh
+
+####INSIDE THE VM##
+
+#Install Apache in the Ubuntu VM
+
+sudo apt update
+sudo apt install apache2
+#to check if Apache HTTP SERVER is working
+systemctl status apache2
+
+
+
+#Set up netowrking
+# so that our website is available outside the virtual machine.
+#adding this line in the vagrant file , if the dhcp isn't working use a manuelly address
+
+config.vm.network "private_network", type: "dhcp"
+
+#OR
+
+config.vm.network "private_network", ip: "192.168.33.10"
+
