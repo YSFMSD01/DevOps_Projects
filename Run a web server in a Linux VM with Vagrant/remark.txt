@@ -1,3 +1,4 @@
+
 #Creating a new vagrant machine
 #This initialises a new Vagrant virtual machine, using Ubuntu version 22.04
 
